@@ -3,7 +3,7 @@
     python3 onshape/verify_onshape.py          # writes onshape/results.json and onshape/screenshots/*.png
 """
 import base64, json, os
-from build_onshape import api, DID, WID, PS_EID, ROOT
+from build_onshape import api, set_feature, DID, WID, PS_EID, ROOT
 
 PS = f'/partstudios/d/{DID}/w/{WID}/e/{PS_EID}'
 OUT = os.path.join(ROOT, 'onshape')
@@ -51,10 +51,22 @@ CHECK = '''function(context is Context, queries) {
     return { "pairs" : pairs, "outside" : outside };
 }'''
 
-VIEWS = {  # 3x4 view matrices (row-major rotation, then translation)
-    'iso': '0.707,0.707,0,0,-0.408,0.408,0.816,0,0.577,-0.577,0.577,0',
-    'front': '1,0,0,0,0,0,1,0,0,-1,0,0',
+VIEWS = {  # name: (3x4 view matrix, row-major rotation then translation in m; pixel size m/px, 0 = fit; cut view)
+    'iso': ('0.707,0.707,0,0,-0.408,0.408,0.816,0,0.577,-0.577,0.577,0', 0, False),
+    'front': ('1,0,0,0,0,0,1,0,0,-1,0,0', 0, False),
+    'cut_front': ('1,0,0,0,0,0,1,0,0,-1,0,0', 0, True),
+    'cut_iso': ('0.707,0.707,0,0,-0.408,0.408,0.816,0,0.577,-0.577,0.577,0', 0, True),
+    'cut_engine': ('1,0,0,0,0,0,1,0,0,-1,0,0', 0.0016, True),
 }
+
+
+def screenshots(cut):
+    os.makedirs(os.path.join(OUT, 'screenshots'), exist_ok=True)
+    for name, (vm, px, c) in VIEWS.items():
+        if c != cut:
+            continue
+        img = api('GET', PS + '/shadedviews', params=dict(viewMatrix=vm, outputHeight=1200, outputWidth=900, pixelSize=px, edges='show'))
+        open(os.path.join(OUT, f'screenshots/{name}.png'), 'wb').write(base64.b64decode(img['images'][0]))
 
 
 def unwrap(v):
@@ -70,6 +82,7 @@ def unwrap(v):
 
 
 if __name__ == '__main__':
+    print('cut view off:', set_feature(False)['featureStatus'])
     parts = api('GET', f'/parts/d/{DID}/w/{WID}/e/{PS_EID}')
     mp = api('GET', PS + '/massproperties', params=dict(massAsGroup='false', useMassPropertyOverrides='false'))['bodies']
     res = dict(parts=[])
@@ -85,9 +98,9 @@ if __name__ == '__main__':
     res['interference'] = unwrap(fs['result'])
     json.dump(res, open(os.path.join(OUT, 'results.json'), 'w'), indent=1)
     for p in res['parts']:
-        print(f"{p['name']:60s} {p['material'] or '-':20s} m={p['mass_kg'] if p['mass_kg'] is None else round(p['mass_kg'], 2)} kg"
+        print(f"{p['name']:75s} {p['material'] or '-':22s} m={p['mass_kg'] if p['mass_kg'] is None else round(p['mass_kg'], 2)} kg"
               f"  zc={p['centroid_z_mm']:.0f} mm")
-    os.makedirs(os.path.join(OUT, 'screenshots'), exist_ok=True)
-    for name, vm in VIEWS.items():
-        img = api('GET', PS + '/shadedviews', params=dict(viewMatrix=vm, outputHeight=1200, outputWidth=900, pixelSize=0, edges='show'))
-        open(os.path.join(OUT, f'screenshots/{name}.png'), 'wb').write(base64.b64decode(img['images'][0]))
+    screenshots(False)
+    print('cut view on:', set_feature(True)['featureStatus'])
+    screenshots(True)
+    print('cut view off:', set_feature(False)['featureStatus'])

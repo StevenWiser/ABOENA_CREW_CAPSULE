@@ -4,25 +4,25 @@
    "name": "Engine - Ablative liner (silica phenolic)",
    "partId": "JHD",
    "material": "Silica phenolic",
-   "mass_kg": 66.13252045077292,
-   "volume_m3": 0.037789899138502295,
+   "mass_kg": 66.1325204507729,
+   "volume_m3": 0.03778989913850229,
    "centroid_z_mm": 38.405442568853196
   },
   {
    "name": "Engine - Chamber case (Ti-6Al-4V)",
    "partId": "JLD",
    "material": "Ti-6Al-4V",
-   "mass_kg": 6.471821378952959,
-   "volume_m3": 0.0014608948883539747,
-   "centroid_z_mm": 38.61970079139384
+   "mass_kg": 6.471821378952955,
+   "volume_m3": 0.0014608948883539736,
+   "centroid_z_mm": 38.61970079139396
   },
   {
    "name": "Engine - Nozzle extension (C-103)",
    "partId": "JPD",
    "material": "C-103 niobium",
-   "mass_kg": 31.272296654326684,
-   "volume_m3": 0.0035295814091514874,
-   "centroid_z_mm": -1259.2634085217808
+   "mass_kg": 31.272296654329395,
+   "volume_m3": 0.003529581409151793,
+   "centroid_z_mm": -1259.263408521777
   },
   {
    "name": "Engine - Injector plate (304L, 12 acoustic cavities)",
@@ -41,56 +41,104 @@
    "centroid_z_mm": 461.8910533738947
   },
   {
-   "name": "Tank - NTO (Ti-6Al-4V)",
+   "name": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
    "partId": "RKBD",
    "material": "Ti-6Al-4V",
-   "mass_kg": 209.52240293039125,
-   "volume_m3": 0.047296122729721106,
-   "centroid_z_mm": 1943.4891999999995
+   "mass_kg": 201.27719003636142,
+   "volume_m3": 0.045434904310690034,
+   "centroid_z_mm": 1928.1181000000004
   },
   {
-   "name": "Tank - MMH (Ti-6Al-4V)",
+   "name": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
    "partId": "RNBD",
    "material": "Ti-6Al-4V",
-   "mass_kg": 208.9758452083985,
-   "volume_m3": 0.04717274649626158,
-   "centroid_z_mm": 4677.361299999999
+   "mass_kg": 201.27719003634567,
+   "volume_m3": 0.04543490431068648,
+   "centroid_z_mm": 4632.389900000001
   },
   {
-   "name": "COPV - He 1 (45 deg, lumped 95.0 kg)",
+   "name": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
    "partId": "RQBD",
    "material": "Lumped COPV",
-   "mass_kg": 94.98487328551528,
-   "volume_m3": 0.45960355877105863,
-   "centroid_z_mm": 3310.9961000000003
+   "mass_kg": 94.9848608134945,
+   "volume_m3": 0.055228854889597764,
+   "centroid_z_mm": 3280.2540000000004
   },
   {
-   "name": "COPV - He 2 (135 deg, lumped 95.0 kg)",
-   "partId": "RRBD",
-   "material": "Lumped COPV",
-   "mass_kg": 94.98487328551528,
-   "volume_m3": 0.45960355877105863,
-   "centroid_z_mm": 3310.9961000000003
-  },
-  {
-   "name": "COPV - He 3 (225 deg, lumped 95.0 kg)",
-   "partId": "RSBD",
-   "material": "Lumped COPV",
-   "mass_kg": 94.98487328551528,
-   "volume_m3": 0.45960355877105863,
-   "centroid_z_mm": 3310.9961000000003
-  },
-  {
-   "name": "COPV - He 4 (315 deg, lumped 95.0 kg)",
+   "name": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
    "partId": "RTBD",
    "material": "Lumped COPV",
-   "mass_kg": 94.98487328551528,
-   "volume_m3": 0.45960355877105863,
-   "centroid_z_mm": 3310.9961000000003
+   "mass_kg": 94.9848608134945,
+   "volume_m3": 0.055228854889597764,
+   "centroid_z_mm": 3280.2540000000004
+  },
+  {
+   "name": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
+   "partId": "RWBD",
+   "material": "Lumped COPV",
+   "mass_kg": 94.9848608134945,
+   "volume_m3": 0.055228854889597764,
+   "centroid_z_mm": 3280.2540000000004
+  },
+  {
+   "name": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
+   "partId": "RZBD",
+   "material": "Lumped COPV",
+   "mass_kg": 94.9848608134945,
+   "volume_m3": 0.055228854889597764,
+   "centroid_z_mm": 3280.2540000000004
+  },
+  {
+   "name": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+   "partId": "ReBD",
+   "material": "321 stainless",
+   "mass_kg": 0.6960687383233236,
+   "volume_m3": 8.668156911427497e-05,
+   "centroid_z_mm": 536.0044190456081
+  },
+  {
+   "name": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+   "partId": "RzBD",
+   "material": "321 stainless",
+   "mass_kg": 5.501557819984405,
+   "volume_m3": 0.0006851151188592862,
+   "centroid_z_mm": 1932.2280126973783
+  },
+  {
+   "name": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+   "partId": "RcCD",
+   "material": "321 stainless",
+   "mass_kg": 0.8610970272033746,
+   "volume_m3": 0.00010723260538995512,
+   "centroid_z_mm": 2948.935070334374
+  },
+  {
+   "name": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+   "partId": "RxCD",
+   "material": "321 stainless",
+   "mass_kg": 0.9707767718347019,
+   "volume_m3": 0.00012089114448339539,
+   "centroid_z_mm": 4812.602619674953
+  },
+  {
+   "name": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+   "partId": "RGDD",
+   "material": "321 stainless",
+   "mass_kg": 4.171041871581637,
+   "volume_m3": 0.0005194258998113813,
+   "centroid_z_mm": 3818.4306135000284
+  },
+  {
+   "name": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+   "partId": "R5DD",
+   "material": "Lumped regulator panel",
+   "mass_kg": 10.000001218371285,
+   "volume_m3": 0.005624968371275056,
+   "centroid_z_mm": 3818.9925999999996
   },
   {
    "name": "REF - Service module envelope",
-   "partId": "RWBD",
+   "partId": "R9DD",
    "material": null,
    "mass_kg": null,
    "volume_m3": 120.39716819652841,
@@ -108,7 +156,7 @@
     "part": "Engine - Chamber case (Ti-6Al-4V)"
    },
    {
-    "outside_envelope_mm3": 3269352.690461285,
+    "outside_envelope_mm3": 3269352.6904614996,
     "part": "Engine - Nozzle extension (C-103)"
    },
    {
@@ -121,27 +169,51 @@
    },
    {
     "outside_envelope_mm3": 0.0,
-    "part": "Tank - NTO (Ti-6Al-4V)"
+    "part": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)"
    },
    {
     "outside_envelope_mm3": 0.0,
-    "part": "Tank - MMH (Ti-6Al-4V)"
+    "part": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)"
    },
    {
     "outside_envelope_mm3": 0.0,
-    "part": "COPV - He 1 (45 deg, lumped 95.0 kg)"
+    "part": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)"
    },
    {
     "outside_envelope_mm3": 0.0,
-    "part": "COPV - He 2 (135 deg, lumped 95.0 kg)"
+    "part": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)"
    },
    {
     "outside_envelope_mm3": 0.0,
-    "part": "COPV - He 3 (225 deg, lumped 95.0 kg)"
+    "part": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)"
    },
    {
     "outside_envelope_mm3": 0.0,
-    "part": "COPV - He 4 (315 deg, lumped 95.0 kg)"
+    "part": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)"
+   },
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)"
+   },
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)"
+   },
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)"
+   },
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)"
+   },
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)"
+   },
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)"
    }
   ],
   "pairs": [
@@ -171,38 +243,74 @@
    },
    {
     "a": "Engine - Ablative liner (silica phenolic)",
-    "b": "Tank - NTO (Ti-6Al-4V)",
-    "min_distance_mm": 352.2475507444401,
+    "b": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
+    "min_distance_mm": 354.45310819002174,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Ablative liner (silica phenolic)",
-    "b": "Tank - MMH (Ti-6Al-4V)",
-    "min_distance_mm": 3084.5234015600404,
+    "b": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "min_distance_mm": 3055.9613777547825,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Ablative liner (silica phenolic)",
-    "b": "COPV - He 1 (45 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3028.2833431712943,
+    "b": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3001.712908322874,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Ablative liner (silica phenolic)",
-    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3028.2833431712943,
+    "b": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3001.712908322874,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Ablative liner (silica phenolic)",
-    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3028.2833431712943,
+    "b": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3001.712908322874,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Ablative liner (silica phenolic)",
-    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3028.2833431712943,
+    "b": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3001.712908322874,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 204.96589999999998,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 204.96589999999998,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 2474.7123184333245,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 3957.7571127475835,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 3871.326623940796,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 3701.617554365806,
     "overlap_mm3": 0.0
    },
    {
@@ -225,38 +333,74 @@
    },
    {
     "a": "Engine - Chamber case (Ti-6Al-4V)",
-    "b": "Tank - NTO (Ti-6Al-4V)",
-    "min_distance_mm": 360.2678397545554,
+    "b": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
+    "min_distance_mm": 362.5472580432474,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Chamber case (Ti-6Al-4V)",
-    "b": "Tank - MMH (Ti-6Al-4V)",
-    "min_distance_mm": 3087.575099043039,
+    "b": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "min_distance_mm": 3059.0445316022615,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Chamber case (Ti-6Al-4V)",
-    "b": "COPV - He 1 (45 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3027.030248771687,
+    "b": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3000.450244101448,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Chamber case (Ti-6Al-4V)",
-    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3027.030248771687,
+    "b": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3000.450244101448,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Chamber case (Ti-6Al-4V)",
-    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3027.030248771687,
+    "b": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3000.450244101448,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Chamber case (Ti-6Al-4V)",
-    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3027.030248771687,
+    "b": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3000.450244101448,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Chamber case (Ti-6Al-4V)",
+    "b": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 204.96589999999998,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Chamber case (Ti-6Al-4V)",
+    "b": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 204.96589999999998,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Chamber case (Ti-6Al-4V)",
+    "b": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 2473.773974704027,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Chamber case (Ti-6Al-4V)",
+    "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 3956.81801427577,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Chamber case (Ti-6Al-4V)",
+    "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 3870.3119082208345,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Chamber case (Ti-6Al-4V)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 3700.6577275495565,
     "overlap_mm3": 0.0
    },
    {
@@ -273,38 +417,74 @@
    },
    {
     "a": "Engine - Nozzle extension (C-103)",
-    "b": "Tank - NTO (Ti-6Al-4V)",
-    "min_distance_mm": 828.3121431991915,
+    "b": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
+    "min_distance_mm": 830.526249318546,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Nozzle extension (C-103)",
-    "b": "Tank - MMH (Ti-6Al-4V)",
-    "min_distance_mm": 3559.4798402728943,
+    "b": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "min_distance_mm": 3530.928647246358,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Nozzle extension (C-103)",
-    "b": "COPV - He 1 (45 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3459.6653798555403,
+    "b": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3432.302970794405,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Nozzle extension (C-103)",
-    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3459.6653798555403,
+    "b": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3432.302970794405,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Nozzle extension (C-103)",
-    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3459.665379855541,
+    "b": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3432.302970794405,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Nozzle extension (C-103)",
-    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3459.6653798555403,
+    "b": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3432.302970794405,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Nozzle extension (C-103)",
+    "b": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 678.5759,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Nozzle extension (C-103)",
+    "b": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 678.5759,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Nozzle extension (C-103)",
+    "b": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 2929.3658429733487,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Nozzle extension (C-103)",
+    "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 4411.126989190772,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Nozzle extension (C-103)",
+    "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 4320.1652957191345,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Nozzle extension (C-103)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 4153.938633049633,
     "overlap_mm3": 0.0
    },
    {
@@ -315,164 +495,542 @@
    },
    {
     "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
-    "b": "Tank - NTO (Ti-6Al-4V)",
-    "min_distance_mm": 327.83529999999985,
+    "b": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
+    "min_distance_mm": 329.9998999999998,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
-    "b": "Tank - MMH (Ti-6Al-4V)",
-    "min_distance_mm": 3062.8509999999987,
+    "b": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "min_distance_mm": 3034.2717000000002,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
-    "b": "COPV - He 1 (45 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3053.309630135842,
+    "b": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3027.1042466256413,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
-    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3053.309630135842,
+    "b": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3027.1042466256413,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
-    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3053.309630135842,
+    "b": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3027.1042466256413,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
-    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
-    "min_distance_mm": 3053.309630135842,
+    "b": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 3027.1042466256413,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "b": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 184.96769999999995,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "b": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 184.96769999999995,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "b": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 2488.6123909218345,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 3971.139250573933,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 3887.4709576751375,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 3715.8121041663157,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
-    "b": "Tank - NTO (Ti-6Al-4V)",
+    "b": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
     "min_distance_mm": 0.0,
-    "overlap_mm3": 19416.620849268726
+    "overlap_mm3": 4.0892159295179634e-05
    },
    {
     "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
-    "b": "Tank - MMH (Ti-6Al-4V)",
-    "min_distance_mm": 2732.8509999999987,
-    "overlap_mm3": 0.0
-   },
-   {
-    "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
-    "b": "COPV - He 1 (45 deg, lumped 95.0 kg)",
-    "min_distance_mm": 2776.158570726862,
+    "b": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "min_distance_mm": 2704.271700000001,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
-    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
-    "min_distance_mm": 2776.158570726862,
+    "b": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 2750.8456988279745,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
-    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
-    "min_distance_mm": 2776.158570726862,
+    "b": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 2750.8456988279745,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
-    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
-    "min_distance_mm": 2776.158570726862,
+    "b": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 2750.8456988279745,
     "overlap_mm3": 0.0
    },
    {
-    "a": "Tank - NTO (Ti-6Al-4V)",
-    "b": "Tank - MMH (Ti-6Al-4V)",
-    "min_distance_mm": 95.6724999999996,
+    "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "b": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 2750.8456988279745,
     "overlap_mm3": 0.0
    },
    {
-    "a": "Tank - NTO (Ti-6Al-4V)",
-    "b": "COPV - He 1 (45 deg, lumped 95.0 kg)",
-    "min_distance_mm": 592.5355126161544,
+    "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "b": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 0.0,
     "overlap_mm3": 0.0
    },
    {
-    "a": "Tank - NTO (Ti-6Al-4V)",
-    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
-    "min_distance_mm": 592.5355126161544,
+    "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "b": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 0.0,
     "overlap_mm3": 0.0
    },
    {
-    "a": "Tank - NTO (Ti-6Al-4V)",
-    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
-    "min_distance_mm": 592.5355126161544,
+    "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "b": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 2191.22422956887,
     "overlap_mm3": 0.0
    },
    {
-    "a": "Tank - NTO (Ti-6Al-4V)",
-    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
-    "min_distance_mm": 592.5355126161544,
+    "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 3670.307909351598,
     "overlap_mm3": 0.0
    },
    {
-    "a": "Tank - MMH (Ti-6Al-4V)",
-    "b": "COPV - He 1 (45 deg, lumped 95.0 kg)",
-    "min_distance_mm": 593.0262981405184,
+    "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 3591.557725941162,
     "overlap_mm3": 0.0
    },
    {
-    "a": "Tank - MMH (Ti-6Al-4V)",
-    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
-    "min_distance_mm": 593.0262981405184,
+    "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 3416.6464252932146,
     "overlap_mm3": 0.0
    },
    {
-    "a": "Tank - MMH (Ti-6Al-4V)",
-    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
-    "min_distance_mm": 593.0262981405184,
+    "a": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
+    "b": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "min_distance_mm": 100.00000000000009,
     "overlap_mm3": 0.0
    },
    {
-    "a": "Tank - MMH (Ti-6Al-4V)",
-    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
-    "min_distance_mm": 593.0262981405184,
+    "a": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
+    "b": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 601.3131020160058,
     "overlap_mm3": 0.0
    },
    {
-    "a": "COPV - He 1 (45 deg, lumped 95.0 kg)",
-    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
+    "a": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
+    "b": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 601.3131020160058,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
+    "b": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 601.3131020160057,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
+    "b": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 601.3131020160057,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
+    "b": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 0.0,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
+    "b": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 30.949999999999367,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
+    "b": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 0.0,
+    "overlap_mm3": 4.2647515806795815e-11
+   },
+   {
+    "a": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
+    "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 1328.7300649201534,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
+    "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 1287.8531881129206,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 1097.6427876606451,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "b": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 601.3131020160068,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "b": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 601.3131020160068,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "b": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 601.3131020160068,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "b": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
+    "min_distance_mm": 601.3131020160067,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "b": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 2665.6305724810813,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "b": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 0.11623659637033296,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "b": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 631.331249519818,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 0.0,
+    "overlap_mm3": 3.717102583953773e-10
+   },
+   {
+    "a": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 648.380759700973,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 462.66319413147926,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
     "min_distance_mm": 1816.1652712388438,
     "overlap_mm3": 0.0
    },
    {
-    "a": "COPV - He 1 (45 deg, lumped 95.0 kg)",
-    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
+    "a": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
     "min_distance_mm": 2965.045600000001,
     "overlap_mm3": 0.0
    },
    {
-    "a": "COPV - He 1 (45 deg, lumped 95.0 kg)",
-    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
+    "a": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
     "min_distance_mm": 1816.165271238844,
     "overlap_mm3": 0.0
    },
    {
-    "a": "COPV - He 2 (135 deg, lumped 95.0 kg)",
-    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
+    "a": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 2616.188327624735,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 1463.4728000000002,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 933.4797235376652,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 1081.681062291364,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 0.010110963029642487,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 917.249833746457,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
     "min_distance_mm": 1816.1652712388438,
     "overlap_mm3": 0.0
    },
    {
-    "a": "COPV - He 2 (135 deg, lumped 95.0 kg)",
-    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
+    "a": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
     "min_distance_mm": 2965.0456000000004,
     "overlap_mm3": 0.0
    },
    {
-    "a": "COPV - He 3 (225 deg, lumped 95.0 kg)",
-    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
+    "a": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 2952.9022981248295,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 889.0326356194221,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 933.479723537665,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 1081.6810622913638,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 0.010110963029642487,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 917.2498337464568,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
     "min_distance_mm": 1816.1652712388438,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 2952.9022981248295,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 889.0326356194219,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 2476.8331617039985,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 2960.4345767816126,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 0.010110963029642487,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 2832.32191570794,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 2616.188327624735,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 1463.4728000000002,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 2476.8331617039985,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 2960.434576781613,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 0.010110963029642487,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 2832.32191570794,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "b": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 242.81819999999993,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "b": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 2226.534412147762,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 3685.835639064145,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 3489.970285066516,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 3427.8026132059804,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "b": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 1308.4333357441328,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 1780.5439055959725,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 718.9037972898335,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 1646.6272108859248,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "min_distance_mm": 250.0,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 136.9088457012549,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 0.0,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "min_distance_mm": 136.9088457012549,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 0.0,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
+    "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
+    "min_distance_mm": 0.0,
     "overlap_mm3": 0.0
    }
   ]
