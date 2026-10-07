@@ -23,10 +23,7 @@ IN = 25.4
 # injector 304L, lines 321 stainless; head stack, COPVs and regulator panel are lumped to the mass budget (s09).
 RHO = dict(liner=1750.0, ti=4430.0, c103=8860.0, ss304=7900.0, ss321=8030.0)
 M_HEAD = 14.0 + 20.0 + 10.0              # valves + gimbal actuators + misc, kg (s09)
-N_COPV = 2                               # two helium bottles (was 4 in s08); same total volume, pressure and helium mass
-COPV_ANGLES = [45, 225]                  # opposite each other: CG stays on the axis, clear of the MMH drop line (180 deg)
-V_HE_BOTTLES = 1.8384166951261058        # m^3 total bottle volume (s08 helium.V_bottle)
-M_COPV = 379.9394503260619 / N_COPV      # kg each; COPV mass ~ pV, so the total is unchanged (s09)
+M_COPV = 379.9394503260619 / 4           # kg each (s09)
 M_REG = 10.0                             # regulator / check-valve / filter panel, kg (assumed, part of s09 'components')
 CAV_D, CAV_PITCH_R = 16.0, 100.0         # acoustic cavity bore and pitch radius, mm (assumed: not in the design data)
 
@@ -95,11 +92,9 @@ def layout(lay):
     Ro = {k: TANK_ID / 2 + t[k] for k in t}
     zo = e['gimbal_plane_z'] + Ro['NTO']
     zf = zo + Ro['NTO'] + TANK_GAP + Ro['MMH']
-    dcp = (6 * V_HE_BOTTLES / N_COPV / math.pi) ** (1 / 3) * 1e3
-    rcp = dcp / 2
-    r_copv = lay['service_module']['diameter'] / 2 - rcp - 50.0       # 50 mm to the SM wall (s12 rule)
+    rcp = he['dia'] / 2
     z_copv = zo + Ro['NTO'] + 50.0
-    z_ring = z_copv + rcp + 60.0                                     # HP line height above the bottle tops
+    z_ring = z_copv + rcp + 60.0
     rc = e['chamber_dia'] / 2
     zi = Z_ENG_INLET
     ro_p = LINE_PROP[0]
@@ -112,13 +107,12 @@ def layout(lay):
     z_gap = zo + Ro['NTO'] + TANK_GAP / 2
     mmh = [(0, 0, zf - Ro['MMH']), (0, 0, z_gap), (MMH_DROP_X, 0, z_gap), (MMH_DROP_X, 0, zi), (-rc, 0, zi)]
 
-    # He: each COPV top outlet -> its own HP line -> regulator panel at +Y -> LP lines to each tank's upper dome.
-    # HP lines run at z_ring around the MMH tank (radius ~1.1 m at that height) and enter the panel's +/-X faces square.
+    # He: COPV top outlets -> HP ring -> regulator panel at +Y -> LP lines to each tank's upper dome
     reg_half = (75.0, 75.0, 125.0)
-    hx = reg_half[0]
-    copv_xy = [(r_copv * math.cos(math.radians(a)), r_copv * math.sin(math.radians(a))) for a in COPV_ANGLES]
-    via = {45: [(400.0, LP_R), (hx, LP_R)], 225: [(-1750.0, 0.0), (-400.0, LP_R), (-hx, LP_R)]}
-    hp = [[(x, y, z_copv + rcp), (x, y, z_ring)] + [(u, v, z_ring) for u, v in via[a]] for a, (x, y) in zip(COPV_ANGLES, copv_xy)]
+    ang = [math.radians(a) for a in he['angles_deg']]
+    hp_stubs = [((he['center_radius'] * math.cos(a), he['center_radius'] * math.sin(a), z_copv + rcp),
+                 (he['center_radius'] * math.cos(a), he['center_radius'] * math.sin(a), z_ring)) for a in ang]
+    hp_feed = ((0, he['center_radius'], z_ring), (0, LP_R + reg_half[1], z_ring))
     c = math.cos(math.radians(PRESS_PORT_DEG))
     lp = {}
     for k, zc, sgn in (('NTO', zo, -1), ('MMH', zf, +1)):
@@ -126,8 +120,8 @@ def layout(lay):
         y_end = math.sqrt(Ro[k] ** 2 - (Ro[k] * c - LINE_LP[0]) ** 2)   # tube end just clear of the dome
         z_reg_face = z_ring + sgn * reg_half[2]
         lp[k] = [(0, LP_R, z_reg_face), (0, LP_R, zp), (0, y_end, zp)]
-    return dict(t=t, Ro=Ro, zo=zo, zf=zf, z_copv=z_copv, z_ring=z_ring, nto=nto, mmh=mmh, hp=hp, lp=lp,
-                copv_xy=copv_xy, dcp=dcp, r_copv=r_copv, reg_center=(0, LP_R, z_ring), reg_half=reg_half,
+    return dict(t=t, Ro=Ro, zo=zo, zf=zf, z_copv=z_copv, z_ring=z_ring, nto=nto, mmh=mmh, hp_stubs=hp_stubs,
+                hp_feed=hp_feed, lp=lp, reg_center=(0, LP_R, z_ring), reg_half=reg_half,
                 ullage={k: 1 - v / (math.pi / 6 * (TANK_ID * 1e-3) ** 3) for k, v in (('NTO', 9.080188679245284), ('MMH', 9.056603773584907))},
                 clear_top=lay['service_module']['length'] - (zf + Ro['MMH']))
 
@@ -191,7 +185,8 @@ def featurescript():
     n_cav = e['acoustic_cavities']['n']
     v_cav_head = n_cav * math.pi * (CAV_D / 2) ** 2 * max(0.0, cav_depth - e['injector_thickness'])
     rho_head = M_HEAD / ((math.pi * rc ** 2 * (z_gim - z_plate) - v_cav_head) * 1e-9)
-    rcp = L['dcp'] / 2
+    he = lay['helium_bottles']
+    rcp = he['dia'] / 2
     rho_copv = M_COPV / (4 / 3 * math.pi * (rcp ** 3 - (rcp - COPV_WALL) ** 3) * 1e-9)
     hx, hy, hz = L['reg_half']
     rho_reg = M_REG / (8 * hx * hy * hz * 1e-9)
@@ -208,10 +203,10 @@ def featurescript():
             ('lpMMH', 'He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)', L['lp']['MMH'], LINE_LP, 'color(0.95, 0.85, 0.2)')):
         lines.append(f'        tag(context, pipeNet(context, id + "{key}", {fs_segarr(fs_segs(path))}, {fs_pts(path[1:-1])}, [], {ro:.4f}, {ri:.4f}),\n'
                      f'            "{name}", {ss321}, {col});')
-    for i, path in enumerate(L['hp']):
-        lines.append(f'        tag(context, pipeNet(context, id + "hp{i}", {fs_segarr(fs_segs(path))}, {fs_pts(path[1:-1])}, [], '
-                     f'{LINE_HP[0]:.4f}, {LINE_HP[1]:.4f}),\n'
-                     f'            "He HP line - COPV {i + 1} to regulator (0.375 in OD x 0.065, 321 SS)", {ss321}, color(0.95, 0.6, 0.1));')
+    hp_segs = [list(s) for s in L['hp_stubs']] + [list(L['hp_feed'])]
+    lines.append(f'        tag(context, pipeNet(context, id + "hp", {fs_segarr(hp_segs)}, [], [[{he["center_radius"]:.4f}, {L["z_ring"]:.4f}]], '
+                 f'{LINE_HP[0]:.4f}, {LINE_HP[1]:.4f}),\n'
+                 f'            "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)", {ss321}, color(0.95, 0.6, 0.1));')
     tanks = '\n'.join(
         f'        shell(context, id + "tank{k}", {zc:.4f}, {TANK_ID / 2:.4f}, {L["Ro"][k]:.4f}, '
         f'"Tank - {k} (Ti-6Al-4V, 2.6 m ID)", {ti}, {col});'
@@ -383,11 +378,11 @@ export const abeonaBuild = defineFeature(function(context is Context, id is Id, 
 
         // 2. Propellant tanks and helium pressurant bottles
 {tanks}
-        for (var i = 0; i < {N_COPV}; i += 1)
+        for (var i = 0; i < {he['n']}; i += 1)
         {{
-            const ang = {COPV_ANGLES}[i];
+            const ang = {he['angles_deg']}[i];
             const a = ang * degree;
-            shellAt(context, id + ("copv" ~ i), vector({L['r_copv']:.4f} * cos(a), {L['r_copv']:.4f} * sin(a), {L['z_copv']:.4f}) * millimeter,
+            shellAt(context, id + ("copv" ~ i), vector({he['center_radius']:.4f} * cos(a), {he['center_radius']:.4f} * sin(a), {L['z_copv']:.4f}) * millimeter,
                 {rcp - COPV_WALL:.4f}, {rcp:.4f});
             tag(context, qCreatedBy(id + ("copv" ~ i) + "outer", EntityType.BODY), "COPV - He " ~ (i + 1) ~ " (" ~ ang ~ " deg, 31 MPa, lumped {M_COPV:.1f} kg)",
                 material("Lumped COPV", {rho_copv:.4f} * kilogram / meter ^ 3), color(0.2, 0.2, 0.2));
@@ -445,6 +440,6 @@ def set_feature(cut):
 if __name__ == '__main__':
     code, L = featurescript()
     open(os.path.join(ROOT, 'onshape/abeona_build.fs'), 'w').write(code)
-    print(json.dumps({k: L[k] for k in ('t', 'Ro', 'zo', 'zf', 'z_copv', 'z_ring', 'dcp', 'r_copv', 'ullage', 'clear_top')}, indent=1))
+    print(json.dumps({k: L[k] for k in ('t', 'Ro', 'zo', 'zf', 'z_copv', 'z_ring', 'ullage', 'clear_top')}, indent=1))
     if '--no-push' not in sys.argv:
         print('feature state:', push(code, '--cut' in sys.argv))

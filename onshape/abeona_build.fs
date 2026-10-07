@@ -166,14 +166,14 @@ export const abeonaBuild = defineFeature(function(context is Context, id is Id, 
         // 2. Propellant tanks and helium pressurant bottles
         shell(context, id + "tankNTO", 1928.1181, 1300.0000, 1302.1359, "Tank - NTO (Ti-6Al-4V, 2.6 m ID)", material("Ti-6Al-4V", 4430.0 * kilogram / meter ^ 3), color(0.85, 0.45, 0.2));
         shell(context, id + "tankMMH", 4632.3899, 1300.0000, 1302.1359, "Tank - MMH (Ti-6Al-4V, 2.6 m ID)", material("Ti-6Al-4V", 4430.0 * kilogram / meter ^ 3), color(0.3, 0.6, 0.85));
-        for (var i = 0; i < 2; i += 1)
+        for (var i = 0; i < 4; i += 1)
         {
-            const ang = [45, 225][i];
+            const ang = [45, 135, 225, 315][i];
             const a = ang * degree;
-            shellAt(context, id + ("copv" ~ i), vector(1836.8272 * cos(a), 1836.8272 * sin(a), 3280.2540) * millimeter,
-                583.1728, 603.1728);
-            tag(context, qCreatedBy(id + ("copv" ~ i) + "outer", EntityType.BODY), "COPV - He " ~ (i + 1) ~ " (" ~ ang ~ " deg, 31 MPa, lumped 190.0 kg)",
-                material("Lumped COPV", 2148.0326 * kilogram / meter ^ 3), color(0.2, 0.2, 0.2));
+            shellAt(context, id + ("copv" ~ i), vector(1961.2614 * cos(a), 1961.2614 * sin(a), 3280.2540) * millimeter,
+                458.7386, 478.7386);
+            tag(context, qCreatedBy(id + ("copv" ~ i) + "outer", EntityType.BODY), "COPV - He " ~ (i + 1) ~ " (" ~ ang ~ " deg, 31 MPa, lumped 95.0 kg)",
+                material("Lumped COPV", 1719.8367 * kilogram / meter ^ 3), color(0.2, 0.2, 0.2));
         }
 
         // 3. Lines: propellant feed (tank outlets to the engine valve inlets) and helium pressurization
@@ -181,16 +181,14 @@ export const abeonaBuild = defineFeature(function(context is Context, id is Id, 
             "Feed line - NTO (1.5 in OD x 0.065, 321 SS)", material("321 stainless", 8030.0 * kilogram / meter ^ 3), color(0.85, 0.45, 0.2));
         tag(context, pipeNet(context, id + "feedMMH", [[[0.0000, 0.0000, 3330.2540], [0.0000, 0.0000, 3280.2540]], [[0.0000, 0.0000, 3280.2540], [-1450.0000, 0.0000, 3280.2540]], [[-1450.0000, 0.0000, 3280.2540], [-1450.0000, 0.0000, 500.0000]], [[-1450.0000, 0.0000, 500.0000], [-121.4091, 0.0000, 500.0000]]], [[0.0000, 0.0000, 3280.2540], [-1450.0000, 0.0000, 3280.2540], [-1450.0000, 0.0000, 500.0000]], [], 19.0500, 17.3990),
             "Feed line - MMH (1.5 in OD x 0.065, 321 SS)", material("321 stainless", 8030.0 * kilogram / meter ^ 3), color(0.3, 0.6, 0.85));
-        tag(context, pipeNet(context, id + "lpNTO", [[[0.0000, 1700.0000, 3818.4268], [0.0000, 1700.0000, 2579.1861]], [[0.0000, 1700.0000, 2579.1861], [0.0000, 1133.1286, 2579.1861]]], [[0.0000, 1700.0000, 2579.1861]], [], 9.5250, 8.2804),
+        tag(context, pipeNet(context, id + "lpNTO", [[[0.0000, 1700.0000, 3693.9926], [0.0000, 1700.0000, 2579.1861]], [[0.0000, 1700.0000, 2579.1861], [0.0000, 1133.1286, 2579.1861]]], [[0.0000, 1700.0000, 2579.1861]], [], 9.5250, 8.2804),
             "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)", material("321 stainless", 8030.0 * kilogram / meter ^ 3), color(0.95, 0.85, 0.2));
-        tag(context, pipeNet(context, id + "lpMMH", [[[0.0000, 1700.0000, 4068.4268], [0.0000, 1700.0000, 5283.4578]], [[0.0000, 1700.0000, 5283.4578], [0.0000, 1133.1286, 5283.4578]]], [[0.0000, 1700.0000, 5283.4578]], [], 9.5250, 8.2804),
+        tag(context, pipeNet(context, id + "lpMMH", [[[0.0000, 1700.0000, 3943.9926], [0.0000, 1700.0000, 5283.4578]], [[0.0000, 1700.0000, 5283.4578], [0.0000, 1133.1286, 5283.4578]]], [[0.0000, 1700.0000, 5283.4578]], [], 9.5250, 8.2804),
             "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)", material("321 stainless", 8030.0 * kilogram / meter ^ 3), color(0.95, 0.85, 0.2));
-        tag(context, pipeNet(context, id + "hp0", [[[1298.8329, 1298.8329, 3883.4268], [1298.8329, 1298.8329, 3943.4268]], [[1298.8329, 1298.8329, 3943.4268], [400.0000, 1700.0000, 3943.4268]], [[400.0000, 1700.0000, 3943.4268], [75.0000, 1700.0000, 3943.4268]]], [[1298.8329, 1298.8329, 3943.4268], [400.0000, 1700.0000, 3943.4268]], [], 4.7625, 3.1115),
-            "He HP line - COPV 1 to regulator (0.375 in OD x 0.065, 321 SS)", material("321 stainless", 8030.0 * kilogram / meter ^ 3), color(0.95, 0.6, 0.1));
-        tag(context, pipeNet(context, id + "hp1", [[[-1298.8329, -1298.8329, 3883.4268], [-1298.8329, -1298.8329, 3943.4268]], [[-1298.8329, -1298.8329, 3943.4268], [-1750.0000, 0.0000, 3943.4268]], [[-1750.0000, 0.0000, 3943.4268], [-400.0000, 1700.0000, 3943.4268]], [[-400.0000, 1700.0000, 3943.4268], [-75.0000, 1700.0000, 3943.4268]]], [[-1298.8329, -1298.8329, 3943.4268], [-1750.0000, 0.0000, 3943.4268], [-400.0000, 1700.0000, 3943.4268]], [], 4.7625, 3.1115),
-            "He HP line - COPV 2 to regulator (0.375 in OD x 0.065, 321 SS)", material("321 stainless", 8030.0 * kilogram / meter ^ 3), color(0.95, 0.6, 0.1));
-        fCuboid(context, id + "reg", { "corner1" : vector(-75.0000, 1625.0000, 3818.4268) * millimeter,
-                    "corner2" : vector(75.0000, 1775.0000, 4068.4268) * millimeter });
+        tag(context, pipeNet(context, id + "hp", [[[1386.8212, 1386.8212, 3758.9926], [1386.8212, 1386.8212, 3818.9926]], [[-1386.8212, 1386.8212, 3758.9926], [-1386.8212, 1386.8212, 3818.9926]], [[-1386.8212, -1386.8212, 3758.9926], [-1386.8212, -1386.8212, 3818.9926]], [[1386.8212, -1386.8212, 3758.9926], [1386.8212, -1386.8212, 3818.9926]], [[0.0000, 1961.2614, 3818.9926], [0.0000, 1775.0000, 3818.9926]]], [], [[1961.2614, 3818.9926]], 4.7625, 3.1115),
+            "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)", material("321 stainless", 8030.0 * kilogram / meter ^ 3), color(0.95, 0.6, 0.1));
+        fCuboid(context, id + "reg", { "corner1" : vector(-75.0000, 1625.0000, 3693.9926) * millimeter,
+                    "corner2" : vector(75.0000, 1775.0000, 3943.9926) * millimeter });
         tag(context, qCreatedBy(id + "reg", EntityType.BODY), "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
             material("Lumped regulator panel", 1777.778 * kilogram / meter ^ 3), color(0.9, 0.2, 0.2));
 
