@@ -4,144 +4,152 @@
    "name": "Engine - Ablative liner (silica phenolic)",
    "partId": "JHD",
    "material": "Silica phenolic",
-   "mass_kg": 66.1325204507729,
-   "volume_m3": 0.03778989913850229,
-   "centroid_z_mm": 38.405442568853196
+   "mass_kg": 66.12905762997212,
+   "volume_m3": 0.03778803293141264,
+   "centroid_z_mm": 38.41218398997318
   },
   {
    "name": "Engine - Chamber case (Ti-6Al-4V)",
    "partId": "JLD",
    "material": "Ti-6Al-4V",
-   "mass_kg": 6.471821378952955,
-   "volume_m3": 0.0014608948883539736,
-   "centroid_z_mm": 38.61970079139396
+   "mass_kg": 6.469889316498093,
+   "volume_m3": 0.0014604716290063414,
+   "centroid_z_mm": 38.6673191025778
   },
   {
    "name": "Engine - Nozzle extension (C-103)",
    "partId": "JPD",
    "material": "C-103 niobium",
-   "mass_kg": 31.272296654329395,
-   "volume_m3": 0.003529581409151793,
-   "centroid_z_mm": -1259.263408521777
+   "mass_kg": 33.226431690584796,
+   "volume_m3": 0.0037501615903594576,
+   "centroid_z_mm": -1241.4202984840276
   },
   {
    "name": "Engine - Injector plate (304L, 12 acoustic cavities)",
-   "partId": "JTD",
+   "partId": "JUD",
    "material": "304L stainless",
-   "mass_kg": 6.935388700842656,
-   "volume_m3": 0.0008778881366170261,
+   "mass_kg": 6.935388710011103,
+   "volume_m3": 0.0008778973050646966,
    "centroid_z_mm": 285.9823
   },
   {
    "name": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
-   "partId": "JXD",
+   "partId": "JYD",
    "material": "Lumped head stack",
-   "mass_kg": 43.99998276103476,
-   "volume_m3": 0.015186480501915135,
+   "mass_kg": 43.999982822359996,
+   "volume_m3": 0.015186541827155686,
    "centroid_z_mm": 461.8910533738947
   },
   {
    "name": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
-   "partId": "RKBD",
+   "partId": "RLBD",
    "material": "Ti-6Al-4V",
-   "mass_kg": 201.27719003636142,
-   "volume_m3": 0.045434904310690034,
+   "mass_kg": 201.2771901636904,
+   "volume_m3": 0.04543503163965923,
    "centroid_z_mm": 1928.1181000000004
   },
   {
    "name": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
-   "partId": "RNBD",
+   "partId": "ROBD",
    "material": "Ti-6Al-4V",
-   "mass_kg": 201.27719003634567,
-   "volume_m3": 0.04543490431068648,
+   "mass_kg": 201.27719016367465,
+   "volume_m3": 0.045435031639655676,
    "centroid_z_mm": 4632.389900000001
   },
   {
    "name": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
-   "partId": "RQBD",
+   "partId": "RRBD",
    "material": "Lumped COPV",
-   "mass_kg": 94.9848608134945,
-   "volume_m3": 0.055228854889597764,
+   "mass_kg": 94.98486095852014,
+   "volume_m3": 0.05522899991523622,
    "centroid_z_mm": 3280.2540000000004
   },
   {
    "name": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
-   "partId": "RTBD",
+   "partId": "RUBD",
    "material": "Lumped COPV",
-   "mass_kg": 94.9848608134945,
-   "volume_m3": 0.055228854889597764,
+   "mass_kg": 94.98486095852014,
+   "volume_m3": 0.05522899991523622,
    "centroid_z_mm": 3280.2540000000004
   },
   {
    "name": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
-   "partId": "RWBD",
+   "partId": "RXBD",
    "material": "Lumped COPV",
-   "mass_kg": 94.9848608134945,
-   "volume_m3": 0.055228854889597764,
+   "mass_kg": 94.98486095852014,
+   "volume_m3": 0.05522899991523622,
    "centroid_z_mm": 3280.2540000000004
   },
   {
    "name": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
-   "partId": "RZBD",
+   "partId": "RaBD",
    "material": "Lumped COPV",
-   "mass_kg": 94.9848608134945,
-   "volume_m3": 0.055228854889597764,
+   "mass_kg": 94.98486095852014,
+   "volume_m3": 0.05522899991523622,
    "centroid_z_mm": 3280.2540000000004
   },
   {
    "name": "Feed line - NTO (1.5 in OD x 0.065, 321 SS)",
-   "partId": "ReBD",
+   "partId": "RfBD",
    "material": "321 stainless",
-   "mass_kg": 0.6960687383233236,
-   "volume_m3": 8.668156911427497e-05,
-   "centroid_z_mm": 536.0044190456081
+   "mass_kg": 0.6968857195576993,
+   "volume_m3": 8.678527018153166e-05,
+   "centroid_z_mm": 536.004419045608
   },
   {
    "name": "Feed line - MMH (1.5 in OD x 0.065, 321 SS)",
-   "partId": "RzBD",
+   "partId": "R0BD",
    "material": "321 stainless",
-   "mass_kg": 5.501557819984405,
-   "volume_m3": 0.0006851151188592862,
-   "centroid_z_mm": 1932.2280126973783
+   "mass_kg": 8.503424120407786,
+   "volume_m3": 0.001058956926576312,
+   "centroid_z_mm": 1932.2280126973774
   },
   {
    "name": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
-   "partId": "RcCD",
+   "partId": "RdCD",
    "material": "321 stainless",
-   "mass_kg": 0.8610970272033746,
-   "volume_m3": 0.00010723260538995512,
-   "centroid_z_mm": 2948.935070334374
+   "mass_kg": 0.9394552564178483,
+   "volume_m3": 0.00011699318261741573,
+   "centroid_z_mm": 2948.9350703343734
   },
   {
    "name": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
-   "partId": "RxCD",
+   "partId": "RyCD",
    "material": "321 stainless",
-   "mass_kg": 0.9707767718347019,
-   "volume_m3": 0.00012089114448339539,
+   "mass_kg": 1.0650501246712052,
+   "volume_m3": 0.00013263388850201808,
    "centroid_z_mm": 4812.602619674953
   },
   {
    "name": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
-   "partId": "RGDD",
+   "partId": "RHDD",
    "material": "321 stainless",
-   "mass_kg": 4.171041871581637,
-   "volume_m3": 0.0005194258998113813,
+   "mass_kg": 4.172779094622001,
+   "volume_m3": 0.0005196487041870487,
    "centroid_z_mm": 3818.4306135000284
   },
   {
    "name": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
-   "partId": "R5DD",
+   "partId": "R6DD",
    "material": "Lumped regulator panel",
-   "mass_kg": 10.000001218371285,
-   "volume_m3": 0.005624968371275056,
+   "mass_kg": 10.00000125000001,
+   "volume_m3": 0.005625000000000005,
    "centroid_z_mm": 3818.9925999999996
   },
   {
-   "name": "REF - Service module envelope",
-   "partId": "R9DD",
+   "name": "REF - Capsule + launch escape system (outer shell)",
+   "partId": "R+DD",
    "material": null,
    "mass_kg": null,
-   "volume_m3": 120.39716819652841,
+   "volume_m3": 1.5585516468338234,
+   "centroid_z_mm": 0.0
+  },
+  {
+   "name": "REF - Service module envelope",
+   "partId": "RCED",
+   "material": null,
+   "mass_kg": null,
+   "volume_m3": 120.3971925789914,
    "centroid_z_mm": 0.0
   }
  ],
@@ -156,7 +164,7 @@
     "part": "Engine - Chamber case (Ti-6Al-4V)"
    },
    {
-    "outside_envelope_mm3": 3269352.6904614996,
+    "outside_envelope_mm3": 3262363.1371302414,
     "part": "Engine - Nozzle extension (C-103)"
    },
    {
@@ -316,7 +324,7 @@
    {
     "a": "Engine - Chamber case (Ti-6Al-4V)",
     "b": "Engine - Nozzle extension (C-103)",
-    "min_distance_mm": 68.99355523082686,
+    "min_distance_mm": 68.90871992862263,
     "overlap_mm3": 0.0
    },
    {
@@ -418,7 +426,7 @@
    {
     "a": "Engine - Nozzle extension (C-103)",
     "b": "Tank - NTO (Ti-6Al-4V, 2.6 m ID)",
-    "min_distance_mm": 830.526249318546,
+    "min_distance_mm": 830.5262493185462,
     "overlap_mm3": 0.0
    },
    {
@@ -430,25 +438,25 @@
    {
     "a": "Engine - Nozzle extension (C-103)",
     "b": "COPV - He 1 (45 deg, 31 MPa, lumped 95.0 kg)",
-    "min_distance_mm": 3432.302970794405,
+    "min_distance_mm": 3432.2535950663755,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Nozzle extension (C-103)",
     "b": "COPV - He 2 (135 deg, 31 MPa, lumped 95.0 kg)",
-    "min_distance_mm": 3432.302970794405,
+    "min_distance_mm": 3432.2535950663755,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Nozzle extension (C-103)",
     "b": "COPV - He 3 (225 deg, 31 MPa, lumped 95.0 kg)",
-    "min_distance_mm": 3432.302970794405,
+    "min_distance_mm": 3432.2535950663755,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Nozzle extension (C-103)",
     "b": "COPV - He 4 (315 deg, 31 MPa, lumped 95.0 kg)",
-    "min_distance_mm": 3432.302970794405,
+    "min_distance_mm": 3432.2535950663755,
     "overlap_mm3": 0.0
    },
    {
@@ -466,25 +474,25 @@
    {
     "a": "Engine - Nozzle extension (C-103)",
     "b": "He LP line - to NTO tank (0.75 in OD x 0.049, 321 SS)",
-    "min_distance_mm": 2929.3658429733487,
+    "min_distance_mm": 2929.33043684599,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Nozzle extension (C-103)",
     "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
-    "min_distance_mm": 4411.126989190772,
+    "min_distance_mm": 4411.089837669851,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Nozzle extension (C-103)",
     "b": "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)",
-    "min_distance_mm": 4320.1652957191345,
+    "min_distance_mm": 4320.125249982311,
     "overlap_mm3": 0.0
    },
    {
     "a": "Engine - Nozzle extension (C-103)",
     "b": "He regulator / check-valve panel (31 to 1.33 MPa, lumped 10 kg)",
-    "min_distance_mm": 4153.938633049633,
+    "min_distance_mm": 4153.900882749811,
     "overlap_mm3": 0.0
    },
    {
@@ -749,7 +757,7 @@
     "a": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",
     "b": "He LP line - to MMH tank (0.75 in OD x 0.049, 321 SS)",
     "min_distance_mm": 0.0,
-    "overlap_mm3": 3.717102583953773e-10
+    "overlap_mm3": 3.7171025839537743e-10
    },
    {
     "a": "Tank - MMH (Ti-6Al-4V, 2.6 m ID)",

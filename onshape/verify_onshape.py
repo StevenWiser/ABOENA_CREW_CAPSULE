@@ -17,7 +17,7 @@ CHECK = '''function(context is Context, queries) {
     var hw = [];
     for (var b in bodies) {
         const n = getProperty(context, { "entity" : b, "propertyType" : PropertyType.NAME });
-        if (n == "REF - Service module envelope") env = b; else { hw = append(hw, b); names = append(names, n); }
+        if (n == "REF - Service module envelope") env = b; else if (n != "REF - Capsule + launch escape system (outer shell)") { hw = append(hw, b); names = append(names, n); }
     }
     const overlap = function(tag is string, a is Query, b is Query, op is string) {
         const id = makeId("chk" ~ tag);
@@ -89,8 +89,8 @@ if __name__ == '__main__':
     for p in parts:
         b = mp.get(p['partId'], {})
         res['parts'].append(dict(name=p['name'], partId=p['partId'], material=(p.get('material') or {}).get('displayName'),
-                                 mass_kg=b.get('mass', [None, None])[1] if b.get('hasMass') else None,
-                                 volume_m3=b.get('volume', [None, None])[1],
+                                 mass_kg=b['mass'][0] if b.get('hasMass') else None,   # [nominal, min, max]
+                                 volume_m3=b['volume'][0] if b.get('volume') else None,
                                  centroid_z_mm=b['centroid'][2] * 1e3 if b.get('centroid') else None))
     fs = api('POST', PS + '/featurescript', json=dict(script=CHECK))
     if fs.get('notices'):
