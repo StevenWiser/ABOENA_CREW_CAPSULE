@@ -1,0 +1,58 @@
+{
+ "units": "mm",
+ "origin": "service-module base on the axis, z up",
+ "service_module": {
+  "diameter": 4980.0,
+  "length": 6000.0,
+  "aft_cone_height": 500.0,
+  "base_to_exit": 2009.9999999999998
+ },
+ "engine": {
+  "gimbal_plane_z": 625.9822514200115,
+  "injector_face_z": 275.9822514200115,
+  "throat_z": -41.5558579555908,
+  "exit_z": -2009.9999999999998,
+  "throat_dia": 140.1911906257674,
+  "exit_dia": 1456.909589624417,
+  "chamber_dia": 242.81826493740283,
+  "head_length": 350.0,
+  "liner_thickness": 82.60782136322537,
+  "case_thickness": 2.5,
+  "extension_thickness": 0.6,
+  "ablative_to_x": 156.07427463791672,
+  "injector_thickness": 20.0,
+  "acoustic_cavities": {
+   "n": 12,
+   "depth": 59.36149096118394
+  },
+  "profile_csv": "engine_profile.csv (x from throat, positive toward exit = -z)"
+ },
+ "tank_MMH": {
+  "center_z": 4677.361349165959,
+  "inner_dia": 2632.7304815841644,
+  "wall": 2.162759000522665,
+  "material": "Ti-6Al-4V"
+ },
+ "tank_NTO": {
+  "center_z": 1943.4891798969438,
+  "inner_dia": 2635.0138569538644,
+  "wall": 2.16463476815894,
+  "material": "Ti-6Al-4V"
+ },
+ "helium_bottles": {
+  "n": 4,
+  "dia": 957.4772135095784,
+  "center_radius": 1961.2613932452107,
+  "center_z": 3310.996108373876,
+  "angles_deg": [
+   45,
+   135,
+   225,
+   315
+  ]
+ },
+ "clearances": {
+  "MMH_top_to_SM_top": 6.273410041958805,
+  "copv_to_wall": 50.00000000000027
+ }
+}

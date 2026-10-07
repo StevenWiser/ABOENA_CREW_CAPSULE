@@ -1,0 +1,480 @@
+{
+ "parts": [
+  {
+   "name": "Engine - Ablative liner (silica phenolic)",
+   "partId": "JHD",
+   "material": "Silica phenolic",
+   "mass_kg": 66.13252045077292,
+   "volume_m3": 0.037789899138502295,
+   "centroid_z_mm": 38.405442568853196
+  },
+  {
+   "name": "Engine - Chamber case (Ti-6Al-4V)",
+   "partId": "JLD",
+   "material": "Ti-6Al-4V",
+   "mass_kg": 6.471821378952959,
+   "volume_m3": 0.0014608948883539747,
+   "centroid_z_mm": 38.61970079139384
+  },
+  {
+   "name": "Engine - Nozzle extension (C-103)",
+   "partId": "JPD",
+   "material": "C-103 niobium",
+   "mass_kg": 31.272296654326684,
+   "volume_m3": 0.0035295814091514874,
+   "centroid_z_mm": -1259.2634085217808
+  },
+  {
+   "name": "Engine - Injector plate (304L, 12 acoustic cavities)",
+   "partId": "JTD",
+   "material": "304L stainless",
+   "mass_kg": 6.935388700842656,
+   "volume_m3": 0.0008778881366170261,
+   "centroid_z_mm": 285.9823
+  },
+  {
+   "name": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+   "partId": "JXD",
+   "material": "Lumped head stack",
+   "mass_kg": 43.99998276103476,
+   "volume_m3": 0.015186480501915135,
+   "centroid_z_mm": 461.8910533738947
+  },
+  {
+   "name": "Tank - NTO (Ti-6Al-4V)",
+   "partId": "RKBD",
+   "material": "Ti-6Al-4V",
+   "mass_kg": 209.52240293039125,
+   "volume_m3": 0.047296122729721106,
+   "centroid_z_mm": 1943.4891999999995
+  },
+  {
+   "name": "Tank - MMH (Ti-6Al-4V)",
+   "partId": "RNBD",
+   "material": "Ti-6Al-4V",
+   "mass_kg": 208.9758452083985,
+   "volume_m3": 0.04717274649626158,
+   "centroid_z_mm": 4677.361299999999
+  },
+  {
+   "name": "COPV - He 1 (45 deg, lumped 95.0 kg)",
+   "partId": "RQBD",
+   "material": "Lumped COPV",
+   "mass_kg": 94.98487328551528,
+   "volume_m3": 0.45960355877105863,
+   "centroid_z_mm": 3310.9961000000003
+  },
+  {
+   "name": "COPV - He 2 (135 deg, lumped 95.0 kg)",
+   "partId": "RRBD",
+   "material": "Lumped COPV",
+   "mass_kg": 94.98487328551528,
+   "volume_m3": 0.45960355877105863,
+   "centroid_z_mm": 3310.9961000000003
+  },
+  {
+   "name": "COPV - He 3 (225 deg, lumped 95.0 kg)",
+   "partId": "RSBD",
+   "material": "Lumped COPV",
+   "mass_kg": 94.98487328551528,
+   "volume_m3": 0.45960355877105863,
+   "centroid_z_mm": 3310.9961000000003
+  },
+  {
+   "name": "COPV - He 4 (315 deg, lumped 95.0 kg)",
+   "partId": "RTBD",
+   "material": "Lumped COPV",
+   "mass_kg": 94.98487328551528,
+   "volume_m3": 0.45960355877105863,
+   "centroid_z_mm": 3310.9961000000003
+  },
+  {
+   "name": "REF - Service module envelope",
+   "partId": "RWBD",
+   "material": null,
+   "mass_kg": null,
+   "volume_m3": 120.39716819652841,
+   "centroid_z_mm": 0.0
+  }
+ ],
+ "interference": {
+  "outside": [
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "Engine - Ablative liner (silica phenolic)"
+   },
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "Engine - Chamber case (Ti-6Al-4V)"
+   },
+   {
+    "outside_envelope_mm3": 3269352.690461285,
+    "part": "Engine - Nozzle extension (C-103)"
+   },
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "Engine - Injector plate (304L, 12 acoustic cavities)"
+   },
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "Engine - Head/valve/gimbal stack (lumped 44 kg)"
+   },
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "Tank - NTO (Ti-6Al-4V)"
+   },
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "Tank - MMH (Ti-6Al-4V)"
+   },
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "COPV - He 1 (45 deg, lumped 95.0 kg)"
+   },
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "COPV - He 2 (135 deg, lumped 95.0 kg)"
+   },
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "COPV - He 3 (225 deg, lumped 95.0 kg)"
+   },
+   {
+    "outside_envelope_mm3": 0.0,
+    "part": "COPV - He 4 (315 deg, lumped 95.0 kg)"
+   }
+  ],
+  "pairs": [
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "Engine - Chamber case (Ti-6Al-4V)",
+    "min_distance_mm": 0.0,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "Engine - Nozzle extension (C-103)",
+    "min_distance_mm": 0.0,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "min_distance_mm": 0.0008739371955876615,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "min_distance_mm": 19.998200020251844,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "Tank - NTO (Ti-6Al-4V)",
+    "min_distance_mm": 352.2475507444401,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "Tank - MMH (Ti-6Al-4V)",
+    "min_distance_mm": 3084.5234015600404,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "COPV - He 1 (45 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3028.2833431712943,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3028.2833431712943,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3028.2833431712943,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Ablative liner (silica phenolic)",
+    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3028.2833431712943,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Chamber case (Ti-6Al-4V)",
+    "b": "Engine - Nozzle extension (C-103)",
+    "min_distance_mm": 68.99355523082686,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Chamber case (Ti-6Al-4V)",
+    "b": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "min_distance_mm": 82.60007621184354,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Chamber case (Ti-6Al-4V)",
+    "b": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "min_distance_mm": 84.99485466150286,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Chamber case (Ti-6Al-4V)",
+    "b": "Tank - NTO (Ti-6Al-4V)",
+    "min_distance_mm": 360.2678397545554,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Chamber case (Ti-6Al-4V)",
+    "b": "Tank - MMH (Ti-6Al-4V)",
+    "min_distance_mm": 3087.575099043039,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Chamber case (Ti-6Al-4V)",
+    "b": "COPV - He 1 (45 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3027.030248771687,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Chamber case (Ti-6Al-4V)",
+    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3027.030248771687,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Chamber case (Ti-6Al-4V)",
+    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3027.030248771687,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Chamber case (Ti-6Al-4V)",
+    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3027.030248771687,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Nozzle extension (C-103)",
+    "b": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "min_distance_mm": 476.26449628546743,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Nozzle extension (C-103)",
+    "b": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "min_distance_mm": 496.157433101682,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Nozzle extension (C-103)",
+    "b": "Tank - NTO (Ti-6Al-4V)",
+    "min_distance_mm": 828.3121431991915,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Nozzle extension (C-103)",
+    "b": "Tank - MMH (Ti-6Al-4V)",
+    "min_distance_mm": 3559.4798402728943,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Nozzle extension (C-103)",
+    "b": "COPV - He 1 (45 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3459.6653798555403,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Nozzle extension (C-103)",
+    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3459.6653798555403,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Nozzle extension (C-103)",
+    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3459.665379855541,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Nozzle extension (C-103)",
+    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3459.6653798555403,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "b": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "min_distance_mm": 0.0,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "b": "Tank - NTO (Ti-6Al-4V)",
+    "min_distance_mm": 327.83529999999985,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "b": "Tank - MMH (Ti-6Al-4V)",
+    "min_distance_mm": 3062.8509999999987,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "b": "COPV - He 1 (45 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3053.309630135842,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3053.309630135842,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3053.309630135842,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Injector plate (304L, 12 acoustic cavities)",
+    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
+    "min_distance_mm": 3053.309630135842,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "b": "Tank - NTO (Ti-6Al-4V)",
+    "min_distance_mm": 0.0,
+    "overlap_mm3": 19416.620849268726
+   },
+   {
+    "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "b": "Tank - MMH (Ti-6Al-4V)",
+    "min_distance_mm": 2732.8509999999987,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "b": "COPV - He 1 (45 deg, lumped 95.0 kg)",
+    "min_distance_mm": 2776.158570726862,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
+    "min_distance_mm": 2776.158570726862,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
+    "min_distance_mm": 2776.158570726862,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Engine - Head/valve/gimbal stack (lumped 44 kg)",
+    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
+    "min_distance_mm": 2776.158570726862,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - NTO (Ti-6Al-4V)",
+    "b": "Tank - MMH (Ti-6Al-4V)",
+    "min_distance_mm": 95.6724999999996,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - NTO (Ti-6Al-4V)",
+    "b": "COPV - He 1 (45 deg, lumped 95.0 kg)",
+    "min_distance_mm": 592.5355126161544,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - NTO (Ti-6Al-4V)",
+    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
+    "min_distance_mm": 592.5355126161544,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - NTO (Ti-6Al-4V)",
+    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
+    "min_distance_mm": 592.5355126161544,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - NTO (Ti-6Al-4V)",
+    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
+    "min_distance_mm": 592.5355126161544,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - MMH (Ti-6Al-4V)",
+    "b": "COPV - He 1 (45 deg, lumped 95.0 kg)",
+    "min_distance_mm": 593.0262981405184,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - MMH (Ti-6Al-4V)",
+    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
+    "min_distance_mm": 593.0262981405184,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - MMH (Ti-6Al-4V)",
+    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
+    "min_distance_mm": 593.0262981405184,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "Tank - MMH (Ti-6Al-4V)",
+    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
+    "min_distance_mm": 593.0262981405184,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 1 (45 deg, lumped 95.0 kg)",
+    "b": "COPV - He 2 (135 deg, lumped 95.0 kg)",
+    "min_distance_mm": 1816.1652712388438,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 1 (45 deg, lumped 95.0 kg)",
+    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
+    "min_distance_mm": 2965.045600000001,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 1 (45 deg, lumped 95.0 kg)",
+    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
+    "min_distance_mm": 1816.165271238844,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 2 (135 deg, lumped 95.0 kg)",
+    "b": "COPV - He 3 (225 deg, lumped 95.0 kg)",
+    "min_distance_mm": 1816.1652712388438,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 2 (135 deg, lumped 95.0 kg)",
+    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
+    "min_distance_mm": 2965.0456000000004,
+    "overlap_mm3": 0.0
+   },
+   {
+    "a": "COPV - He 3 (225 deg, lumped 95.0 kg)",
+    "b": "COPV - He 4 (315 deg, lumped 95.0 kg)",
+    "min_distance_mm": 1816.1652712388438,
+    "overlap_mm3": 0.0
+   }
+  ]
+ }
+}
