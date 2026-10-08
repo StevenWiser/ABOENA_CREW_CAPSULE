@@ -3,6 +3,7 @@
 \usepackage{amsmath,booktabs,graphicx,array,caption,float}
 \usepackage[hidelinks]{hyperref}
 \usepackage{enumitem,adjustbox}
+\graphicspath{{./}{figs/}{images/}{Figures/}{figures/}}  % finds the PNGs in the project root or any of these folders
 \captionsetup{font=small}
 \setlist{itemsep=1pt,topsep=3pt}
 \title{Project ABEONA Crew Capsule Service Module:\\Propulsion CAD Model and Performance Verification}
@@ -30,9 +31,9 @@ can therefore be rebuilt from the analysis files at any time. Units are millimet
 (SM) base on the vehicle axis, with $+Z$ up. Figures~\ref{fig:iso} and \ref{fig:front} show the full model.
 
 \begin{figure}[H]\centering
-\begin{minipage}{0.48\textwidth}\centering\includegraphics[width=\textwidth]{figs/cad_iso.png}
+\begin{minipage}{0.48\textwidth}\centering\includegraphics[width=\textwidth]{cad_iso}
 \caption{Full model, isometric view.}\label{fig:iso}\end{minipage}\hfill
-\begin{minipage}{0.48\textwidth}\centering\includegraphics[width=\textwidth]{figs/cad_front.png}
+\begin{minipage}{0.48\textwidth}\centering\includegraphics[width=\textwidth]{cad_front}
 \caption{Full model, front view.}\label{fig:front}\end{minipage}
 \end{figure}
 
@@ -63,12 +64,12 @@ Mass properties must be read with the cut view off. Onshape's own section-view t
 changing the model.
 
 \begin{figure}[H]\centering
-\begin{minipage}{0.48\textwidth}\centering\includegraphics[width=\textwidth]{figs/cad_cut_front.png}
+\begin{minipage}{0.48\textwidth}\centering\includegraphics[width=\textwidth]{cad_cut_front}
 \caption{Cut view, front.}\label{fig:cutfront}\end{minipage}\hfill
-\begin{minipage}{0.48\textwidth}\centering\includegraphics[width=\textwidth]{figs/cad_cut_iso.png}
+\begin{minipage}{0.48\textwidth}\centering\includegraphics[width=\textwidth]{cad_cut_iso}
 \caption{Cut view, isometric.}\label{fig:cutiso}\end{minipage}
 \end{figure}
-\begin{figure}[H]\centering\includegraphics[width=0.6\textwidth]{figs/cad_cut_engine.png}
+\begin{figure}[H]\centering\includegraphics[width=0.6\textwidth]{cad_cut_engine}
 \caption{Cut view of the engine: head stack, injector, silica-phenolic liner and Ti case, throat, and the start of the
 C-103 extension, with the NTO (right) and MMH (left) feed lines entering the valve stack.}\label{fig:cutengine}\end{figure}
 
