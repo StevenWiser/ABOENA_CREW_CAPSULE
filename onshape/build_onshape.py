@@ -27,10 +27,8 @@ M_COPV = 379.9394503260619 / 4           # kg each (s09)
 M_REG = 10.0                             # regulator / check-valve / filter panel, kg (assumed, part of s09 'components')
 CAV_D, CAV_PITCH_R = 16.0, 100.0         # acoustic cavity bore and pitch radius, mm (assumed: not in the design data)
 
-# Tank size from the PDR crew-capsule drawing (PDR_Review slide 7: 2.6 m spheres, 9.203 m^3 each).
-# The wall is scaled from s08 (same MEOP and allowable, t ~ D).
-TANK_ID = 2600.0
-TANK_GAP = 100.0                         # NTO top to MMH bottom (s12)
+# Tank size and wall from the s08 analysis (layout.json): 5 % ullage, so the load fits at the 32 C hot case.
+TANK_GAP = 90.0                          # NTO top to MMH bottom (reduced from 100 mm in s12 so the stack fits on outer surfaces)
 COPV_WALL = 20.0                         # COPV shell shown hollow for the cut view (lumped density keeps s09 mass)
 
 # Line sizes. Propellant: s08 (1.5 in OD x 0.065 in, 321 SS, ~3.6 m/s at 7.94 kg/s total).
@@ -88,8 +86,9 @@ def outlines():
 def layout(lay):
     """Tank, COPV and line positions (mm). Same stacking rules as s12, but each tank sits on its OUTER surface."""
     e, he = lay['engine'], lay['helium_bottles']
-    t = {k: lay['tank_' + k]['wall'] * TANK_ID / lay['tank_' + k]['inner_dia'] for k in ('NTO', 'MMH')}
-    Ro = {k: TANK_ID / 2 + t[k] for k in t}
+    ID = {k: lay['tank_' + k]['inner_dia'] for k in ('NTO', 'MMH')}   # s08 sizes: 5 % ullage + 0.5 % PMD
+    t = {k: lay['tank_' + k]['wall'] for k in ID}
+    Ro = {k: ID[k] / 2 + t[k] for k in t}
     zo = e['gimbal_plane_z'] + Ro['NTO']
     zf = zo + Ro['NTO'] + TANK_GAP + Ro['MMH']
     rcp = he['dia'] / 2
@@ -122,7 +121,7 @@ def layout(lay):
         lp[k] = [(0, LP_R, z_reg_face), (0, LP_R, zp), (0, y_end, zp)]
     return dict(t=t, Ro=Ro, zo=zo, zf=zf, z_copv=z_copv, z_ring=z_ring, nto=nto, mmh=mmh, hp_stubs=hp_stubs,
                 hp_feed=hp_feed, lp=lp, reg_center=(0, LP_R, z_ring), reg_half=reg_half,
-                ullage={k: 1 - v / (math.pi / 6 * (TANK_ID * 1e-3) ** 3) for k, v in (('NTO', 9.080188679245284), ('MMH', 9.056603773584907))},
+                ID=ID, ullage={k: 1 - v / (math.pi / 6 * (ID[k] * 1e-3) ** 3) for k, v in (('NTO', 9.080188679245284), ('MMH', 9.056603773584907))},
                 clear_top=lay['service_module']['length'] - (zf + Ro['MMH']))
 
 
@@ -208,8 +207,8 @@ def featurescript():
                  f'{LINE_HP[0]:.4f}, {LINE_HP[1]:.4f}),\n'
                  f'            "He HP manifold - COPVs to regulator (0.375 in OD x 0.065, 321 SS)", {ss321}, color(0.95, 0.6, 0.1));')
     tanks = '\n'.join(
-        f'        shell(context, id + "tank{k}", {zc:.4f}, {TANK_ID / 2:.4f}, {L["Ro"][k]:.4f}, '
-        f'"Tank - {k} (Ti-6Al-4V, 2.6 m ID)", {ti}, {col});'
+        f'        shell(context, id + "tank{k}", {zc:.4f}, {L["ID"][k] / 2:.4f}, {L["Ro"][k]:.4f}, '
+        f'"Tank - {k} (Ti-6Al-4V, {L["ID"][k] / 1e3:.3f} m ID)", {ti}, {col});'
         for k, zc, col in (('NTO', L['zo'], 'color(0.85, 0.45, 0.2)'), ('MMH', L['zf'], 'color(0.3, 0.6, 0.85)')))
     code = f'''FeatureScript {FS_VERSION};
 import(path : "onshape/std/common.fs", version : "{FS_VERSION}.0");
